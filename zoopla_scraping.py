@@ -1,27 +1,23 @@
 """
-The below python script was used to automatically scrape property listing data from a real estate website, presumably Zoopla, based on the URLs and references in the code. It employs several libraries to execute HTTP requests, process HTML content, and handle data:
+The Python script provided below was utilized to autonomously extract property listing data from a real estate website, specifically Zoopla, by using the URLs and references embedded within the code. The programme utilises multiple libraries in order to carry out HTTP queries, manipulate HTML content, and manage data.
 
-- `requests`: For performing HTTP requests to the Zoopla API and property detail pages.
-- `BeautifulSoup`: For parsing and extracting data from HTML content retrieved from property detail pages.
-- `pandas`: For organizing scraped data into structured DataFrames, performing data cleaning, and saving the data into an Excel file.
-- `numpy`: For numerical operations that may be required during data transformation (though not explicitly used in the provided snippet).
-- `urllib3`: For disabling warnings related to unverified HTTPS requests, which is generally used to avoid security warnings during development.
+
+- requests: For performing HTTP requests to the Zoopla API and property detail pages.
+- BeautifulSoup: For parsing and extracting data from HTML content retrieved from property detail pages.
+- urllib3: For disabling warnings related to unverified HTTPS requests, which is generally used to avoid security warnings during development.
 
 The script is structured to execute the following tasks:
 
-1. **Data Retrieval**: Utilizes predefined cookies and headers to simulate browser requests and avoid bot detection, fetching property listing data from the Zoopla API.
+1. Data Retrieval: This process involves the utilization of preconfigured cookies and headers to mimic browser requests and circumvent bot detection mechanisms. 
+     It entails the retrieval of property listing data from the Zoopla API.
 
-2. **Data Extraction**: Applies the `BeautifulSoup` library to parse detailed HTML content from property listing pages, extracting relevant information like postcodes, geographic coordinates, and property features.
+2. Data Extraction: Utilises the `BeautifulSoup` library to perform parsing of intricate HTML material retrieved from property listing pages, enabling the extraction of pertinent details like as postcodes, geographic locations, and property features.
 
-3. **Data Transformation**: Implements functions to normalize and prepare the scraped data for analysis, including categorizing property types and converting strings to numeric values where appropriate.
+3. Data Transformation: This component incorporates many functions that facilitate the normalisation and preprocessing of the scraped data in order to make it suitable for analysis. These methods encompass tasks such as categorising property kinds and turning relevant string data into numeric values.
 
-4. **Data Storage**: Aggregates the cleaned data into a single DataFrame and saves the data into an Excel file for further analysis or reporting.
+4. Data Storage: Aggregates the cleaned data into a single DataFrame and saves the data into an Excel file for further analysis or reporting.
 
-5. **Error Handling**: Includes error handling mechanisms to manage common issues such as timeouts and connection errors, ensuring the scraper's robustness.
-
-6. **Function Definitions**: Contains several function definitions, each responsible for a specific part of the scraping process, such as sending requests, parsing responses, and cleaning the data.
-
-7. **Script Execution**: The `main()` function orchestrates the scraping process across different property types and manages pagination to navigate through multiple listing pages.
+5. Error Handling: Includes error handling mechanisms to manage common issues such as timeouts and connection errors, ensuring the scraper's robustness.
 
 This script exemplifies the use of online scraping to acquire real estate data, providing an efficient means of automatically collecting massive volumes of data from the web.
 """
